@@ -1,3 +1,4 @@
+"""Routes package."""
 from fastapi import APIRouter
 
 from . import health

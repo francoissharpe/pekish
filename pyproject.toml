@@ -7,6 +7,7 @@ authors = ["Francois Sharpe <francois.sharpe@live.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 fastapi = "^0.70.0"
+flake8-docstrings = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -14,6 +15,7 @@ requests = "^2.26.0"
 pytest-cov = "^3.0.0"
 uvicorn = {extras = ["standard"], version = "^0.15.0"}
 black = "^21.11b1"
+flake8 = "^4.0.1"
 
 [tool.coverage.report]
 fail_under = 100
