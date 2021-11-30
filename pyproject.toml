@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pekish"
+version = "0.1.0"
+description = "Hungry for some news?"
+authors = ["Francois Sharpe <francois.sharpe@live.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.70.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+requests = "^2.26.0"
+pytest-cov = "^3.0.0"
+uvicorn = {extras = ["standard"], version = "^0.15.0"}
+black = "^21.11b1"
+
+[tool.coverage.run]
+source = ['pekish']
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
