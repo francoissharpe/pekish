@@ -8,7 +8,7 @@ jobs:
       matrix:
         python-version: [3.8]
         poetry-version: [1.1.12]
-        os: [ubuntu-18.04, macos-latest, windows-latest]
+        os: [ubuntu-20.04]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -19,5 +19,11 @@ jobs:
         uses: abatilo/actions-poetry@v2.0.0
         with:
           poetry-version: ${{ matrix.poetry-version }}
-      - name: View poetry --help
+      - name: Poetry install
+        run: poetry install -q
+      - name: Run black
+        run: poetry run black --check .
+      - name: Run flake8
+        run: poetry run flake8 .
+      - name: Run pytest
         run: poetry run pytest --cov
