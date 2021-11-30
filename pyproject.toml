@@ -15,9 +15,11 @@ pytest-cov = "^3.0.0"
 uvicorn = {extras = ["standard"], version = "^0.15.0"}
 black = "^21.11b1"
 
+[tool.coverage.report]
+fail_under = 100
+
 [tool.coverage.run]
 source = ['pekish']
-
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
